@@ -14,10 +14,13 @@
         <java.version>11</java.version>
         <spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
         <spring.boot.maven.dependencies.version>2.5.7</spring.boot.maven.dependencies.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <modules>
         <module>customer</module>
+        <module>fraud</module>
     </modules>
 
     <dependencyManagement>
