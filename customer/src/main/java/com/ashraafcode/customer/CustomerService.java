@@ -2,6 +2,8 @@ package com.ashraafcode.customer;
 
 import com.example.clients.fraud.FraudCheckResponse;
 import com.example.clients.fraud.FraudClient;
+import com.example.clients.notification.NotificationClient;
+import com.example.clients.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,7 @@ public class CustomerService {
 //    RestTemplate restTemplate;
 
     private final FraudClient fraudClient;
+    private final NotificationClient notificationClient;
 
     public void registerCustomer(CustomerRegistrationRequest request){
         Customer customer = Customer.builder()
@@ -44,7 +47,11 @@ public class CustomerService {
 
         //todo: send notification
 
-        customerRepository.save(customer);
+        notificationClient.sendNotification(new NotificationRequest(
+                customer.getId(),
+                customer.getEmail(),
+                String.format("Hi %s, weclome to Ashraafcode...", customer.getFirstName())));
+
     }
 
 }
