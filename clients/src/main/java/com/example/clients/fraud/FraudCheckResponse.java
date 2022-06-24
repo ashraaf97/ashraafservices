@@ -1,4 +1,4 @@
-package com.example.fraud;
+package com.example.clients.fraud;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
