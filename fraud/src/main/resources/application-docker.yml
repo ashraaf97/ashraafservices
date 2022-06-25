@@ -6,7 +6,7 @@ spring:
   datasource:
     password: password
     url: jdbc:postgresql://postgres:5432/fraud
-    username: amigoscode
+    username: ashraafcode
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -24,4 +24,4 @@ eureka:
       defaultZone: http://eureka-server:8761/eureka
     fetch-registry: true
     register-with-eureka: true
-    enabled: false
+    enabled: true
