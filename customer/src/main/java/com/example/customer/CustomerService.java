@@ -1,4 +1,4 @@
-package com.ashraafcode.customer;
+package com.example.customer;
 
 import com.example.clients.fraud.FraudCheckResponse;
 import com.example.clients.fraud.FraudClient;
@@ -7,7 +7,6 @@ import com.example.clients.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 @AllArgsConstructor

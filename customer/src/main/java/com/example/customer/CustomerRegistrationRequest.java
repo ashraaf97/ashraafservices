@@ -1,4 +1,4 @@
-package com.ashraafcode.customer;
+package com.example.customer;
 
 import lombok.Data;
 
